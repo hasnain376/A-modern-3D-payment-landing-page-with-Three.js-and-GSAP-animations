@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Payment Landing Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- BoxIcon Link -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  </head>
+  <body>
+    <!-- 3D Canvas Container -->
+    <div id="canvas-container"></div>
+    
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+      <div class="loading-content">
+        <div class="loading-spinner"></div>
+        <h2>Loading 3D Experience...</h2>
+        <div class="loading-progress">
+          <div class="progress-bar"></div>
+        </div>
+      </div>
+    </div>
+
+    <header>
+      <nav>
+        <h1>M.Hasnain</h1>
+        <ul id="navLinks">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#help">Help</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#about">About us</a></li>
+          <div class="navLink-Btn">
+            <button onclick="window.location.href='login.html'">Login</button>
+            <button onclick="window.location.href='signup.html'">Sign Up</button>
+          </div>
+        </ul>
+        <div class="Btn-container">
+          <button onclick="window.location.href='login.html'">Login</button>
+          <button onclick="window.location.href='signup.html'">Sign Up</button>
+        </div>
+        <div class="menu-icon">
+          <i class="bx bx-menu-alt-left" id="menu-icon"></i>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-container">
+        <div class="text-container">
+          <h6 class="animate-text">start saving money</h6>
+          <h1 class="animate-text">smart credit card for your daily life.</h1>
+          <p class="animate-text">Experience the future of payments with our revolutionary 3D credit card technology.</p>
+          <button class="cta-button animate-text">
+            Download <span><i class="bx bx-down-arrow-circle"></i></span>
+          </button>
+        </div>
+        <div class="image-container">
+          <div id="card-3d-container"></div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section id="features" class="features-section">
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="bx bx-shield-quarter"></i>
+            </div>
+            <h3>Secure Payments</h3>
+            <p>Advanced encryption technology keeps your transactions safe</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="bx bx-world"></i>
+            </div>
+            <h3>Global Access</h3>
+            <p>Use your card anywhere in the world with zero foreign transaction fees</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="bx bx-mobile-alt"></i>
+            </div>
+            <h3>Mobile Integration</h3>
+            <p>Seamlessly connect with your smartphone for instant payments</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Interactive Elements -->
+    <div class="floating-elements">
+      <div class="floating-card" data-speed="0.5"></div>
+      <div class="floating-card" data-speed="0.3"></div>
+      <div class="floating-card" data-speed="0.7"></div>
+    </div>
+
+    <!-- Particle Effects Container -->
+    <div id="particles-container"></div>
+  </body>
+  <script src="script.js"></script>
+</html>
